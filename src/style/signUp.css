@@ -1,0 +1,326 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+:root {
+  --primary-color: #edf5f1;
+  --secondary-color: #59876b;
+  --lightgreen-color: #42cc79;
+  --blackgreen-color: #082212;
+  --lightgreen2-color: #cbeed9;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--primary-color);
+  font-family: 'Poppins', sans-serif;
+  margin: 0;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+section {
+  padding: 5em 2em;
+  width: 100%;
+}
+
+/* Navbar */
+.navbar {
+  background-color: var(--primary-color);
+  padding: 1.2em;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  z-index: 999;
+}
+
+.navbar .container .logo {
+  color: var(--secondary-color);
+  font-weight: bold;
+  font-size: 1.3em;
+}
+
+.navbar .container .logo span {
+  color: var(--lightgreen-color);
+}
+
+.navbar .container nav {
+  display: none;
+}
+
+.navbar .container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.navbar .container nav.menu-btn {
+  display: block;
+}
+
+.navbar .container nav {
+  background-color: var(--blackgreen-color);
+  position: fixed;
+  right: 0;
+  top: 0;
+  padding: 1em;
+  width: 63%;
+  height: 100vh;
+}
+
+.navbar .container nav ul.primary-nav {
+  margin-top: 5em;
+}
+
+.navbar .container nav ul li a {
+  color: var(--primary-color);
+  padding: 0.5em;
+  text-decoration: none;
+  display: block;
+  font-size: 1em;
+  transition: all 0.5s ease;
+}
+
+.navbar .container nav ul li a:hover {
+  color: var(--lightgreen-color);
+}
+
+.navbar .container nav .mobile-menu-exit {
+  float: right;
+  margin: 0.5em;
+  cursor: pointer;
+}
+
+.navbar .container nav ul.secondary-nav {
+  margin-top: 2em;
+}
+
+/* End Navbar */
+
+/* Sign Up  */
+.signUp {
+  /* height: 120vh; */
+  background-color: var(--lightgreen2-color);
+}
+
+.signUp .container .form-container form h1 {
+  font-weight: bold;
+  letter-spacing: 2px;
+  margin-top: 1em;
+  text-align: center;
+  color: var(--secondary-color);
+}
+
+.signUp .container .form-container form .social-container {
+  text-align: center;
+}
+
+.signUp .container .form-container form .social-container a {
+  border: 2px solid var(--secondary-color);
+  border-radius: 50%;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  height: 40px;
+  width: 40px;
+  margin: 1.3em 1em 1.3em;
+  background-color: var(--lightgreen2-color);
+  color: var(--blackgreen-color);
+  transition: all 0.5s ease-in;
+}
+
+.signUp .container .form-container form span {
+  font-size: 12px;
+  display: block;
+  text-align: center;
+  margin: 1.3em 0 1.3em;
+  font-size: 0.8em;
+  color: var(--secondary-color);
+}
+
+.signUp .container .form-container form input {
+  background-color: var(--primary-color);
+  border: none;
+  padding: 12px 15px;
+  width: 100%;
+  margin: 1em 0 1em;
+}
+
+.signUp .container .form-container form button {
+  border-radius: 20px;
+  border: 1px solid var(--secondary-color);
+  background-color: var(--blackgreen-color);
+  color: var(--primary-color);
+  font-size: 12px;
+  font-weight: bold;
+  padding: 10px 35px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  margin: 1em 0 1em;
+  transition: all 0.5s ease-in;
+}
+
+.signUp .container .form-container form button:hover {
+  background-color: var(--secondary-color);
+}
+
+.signUp .container .form-container form p {
+  font-size: 0.7em;
+  color: var(--secondary-color);
+  margin-top: 0.5em;
+}
+
+.signUp .container .form-container form p .already-account {
+  color: var(--lightgreen-color);
+  cursor: pointer;
+}
+
+.signUp .container .form-img .img-desktop {
+  display: none;
+}
+
+.signUp .container .form-img {
+  display: flex;
+  justify-content: center;
+  margin-top: 1em;
+}
+
+.signUp .container .form-img .img-phone {
+  width: 30%;
+}
+
+/* End Sign Up  */
+
+/* Footer */
+footer {
+  padding: 2em 3em;
+  background-color: var(--lightgreen2-color);
+  text-align: center;
+}
+
+footer p {
+  font-size: 0.8em;
+  color: var(--secondary-color);
+}
+/* End Footer */
+
+@media only screen and (min-width: 768px) {
+  .signUp .container .form-container form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .signUp .container .form-container form input {
+    width: 70%;
+  }
+
+  .signUp .container .form-container form button {
+    width: 12em;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .navbar .container .mobile-menu,
+  .navbar .container nav .mobile-menu-exit {
+    display: none;
+  }
+
+  .navbar .container {
+    display: grid;
+    grid-template-columns: 180px auto;
+    justify-content: unset;
+  }
+
+  .navbar .container nav {
+    display: flex;
+    justify-content: space-between;
+    background: none;
+    position: unset;
+    width: 100%;
+    height: auto;
+    padding: 0;
+  }
+
+  .navbar .container nav ul {
+    display: flex;
+  }
+
+  .navbar .container nav ul li a {
+    color: var(--blackgreen-color);
+    font-size: 1em;
+    padding: 0.1em 1em;
+  }
+
+  .navbar .container nav ul.primary-nav {
+    margin: 0;
+  }
+
+  .navbar .container nav ul.secondary-nav {
+    margin: 0;
+  }
+
+  .navbar .container nav ul.primary-nav li.current a {
+    font-weight: bold;
+  }
+
+  .navbar .container nav ul.secondary-nav li.member-cta a {
+    color: var(--secondary-color);
+    border: 3px solid var(--secondary-color);
+    border-radius: 5em;
+    font-weight: bold;
+    margin-top: -0.2em;
+    transition: all 0.5s ease;
+  }
+
+  .navbar .container nav ul.secondary-nav li.member-cta a:hover {
+    background-color: var(--lightgreen-color);
+    color: var(--primary-color);
+  }
+}
+
+@media only screen and (min-width: 1080px) {
+  .container {
+    width: 80%;
+    margin: 0 auto;
+  }
+
+  section {
+    padding: 10em 4em;
+  }
+
+  .signUp .container {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+  }
+
+  .signUp .container .form-img {
+    width: 50%;
+    height: auto;
+  }
+
+  .signUp .container .form-img .img-desktop {
+    display: block;
+    width: 60%;
+    object-fit: contain;
+  }
+
+  .signUp .container .form-img .img-phone {
+    display: none;
+  }
+
+  .signUp .container .form-container {
+    width: 50%;
+  }
+}
